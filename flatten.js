@@ -35,7 +35,7 @@ const flatten = function(array) {
     }
   }
   return output;
-}
+};
 
 // Test 1: one dimensional array is unmodified
 assertArraysEqual(flatten([1, 2, 3]), [1, 2, 3]);

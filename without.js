@@ -27,7 +27,7 @@ const without = function(source, itemsToRemove) {
     }
   }
   return result;
-}
+};
 
 // Test 1: don't modify original array
 const words = ["hello", "world", "lighthouse"];
