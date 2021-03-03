@@ -28,13 +28,6 @@ const eqObjects = function(object1, object2) {
     return false;
   }
 
-  // Check keys are the same
-  for (let key in objOneKeys) {
-    if (objOneKeys[key] !== objTwoKeys[key]) {
-      return false;
-    }
-  }
-
   // Check values are the same
   for (let key in object1) {
     if (object1[key] instanceof Array && object2[key] instanceof Array) {
