@@ -1,22 +1,22 @@
-const assertEqual = require('../assertEqual');
+const { assert } = require('chai');
 const tail = require('../tail');
 
-// Test Case 1: Check returned array elements
-const result = tail([1, 2, 3]);
-assertEqual(result.length, 2);
-assertEqual(result[0], 2);
-assertEqual(result[1], 3);
-
-// Test Case 2: Check original array is unmodified
-const words = ['Light', 'House', 'Labs'];
-tail(words);
-assertEqual(words.length, 3);
-
-// Test Case 3: Check we get an empty array if we pass an array with 1 element
-const word = ['Hi'];
-const empty = tail(word);
-assertEqual(empty.length, 0);
-
-// Test Case 4: Check we get an empty array if we pass in an empty array
-const emptyTwo = tail([]);
-assertEqual(emptyTwo.length, 0);
+describe('tail', () => {
+  // Check returned elements are correct
+  it('returns [2, 3] for [1, 2, 3]', () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+  // Check we get an empty array if passing an array with 1 or 0 elements
+  it('returns [] for [\'5\']', () => {
+    assert.deepEqual(tail(['5']), []);
+  });
+  it('returns [] for []', () => {
+    assert.deepEqual(tail([]), []);
+  });
+  // Check original array is unmodified
+  it('doesn\'t modify the original array', () => {
+    const words = ['Light', 'House', 'Labs'];
+    tail(words);
+    assert.deepEqual(words, ['Light', 'House', 'Labs']);
+  });
+});
