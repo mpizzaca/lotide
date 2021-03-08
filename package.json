@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@mpizzaca/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A collection of useful JS helper functions",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mpizzaca/lotide.git"
   },
-  "author": "",
+  "author": "Mitchell Pizzacalla",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mpizzaca/lotide/issues"
